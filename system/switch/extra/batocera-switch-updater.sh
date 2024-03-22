@@ -797,7 +797,7 @@ if [[ -e "$cfg" ]]; then
            yuzu_custom_version_hash=$(curl -Ls "https://github.com/yuzu-emu/yuzu-mainline/releases/tag/mainline-0-$yuzu_custom_version" | grep "github.com/yuzu-emu/yuzu-mainline/commit/" | head -n1 | sed 's,^.*/commit/,,g' | cut -c 1-9)
            yuzu_custom_version_date=$(curl -Ls "https://github.com/yuzu-emu/yuzu-mainline/releases/tag/mainline-0-$yuzu_custom_version" | grep "datetime=" | sed 's,^.*datetime=",,g' | cut -d "T" -f1 | sed 's,-,,g')        
            if [[ "$yuzu_custom_version_date" != "" ]] && [[ "$yuzu_custom_version_hash" != "" ]]; then 
-              link_yuzu=$(echo "https://github.com/yuzu-emu/yuzu-mainline/releases/download/mainline-0-$yuzu_custom_version/yuzu-mainline-$yuzu_custom_version_date-$yuzu_custom_version_hash.AppImage")
+              link_yuzu=$(echo "https://github.com/yuzu-mirror/yuzu-downloads/raw/main/Mainline%20Build%20-%20537296095%20(2024-03-04)/yuzu-mainline-20240304-537296095.AppImage")
          fi
       fi
    ### yuzuEA
