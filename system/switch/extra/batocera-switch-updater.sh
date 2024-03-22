@@ -1701,11 +1701,11 @@ rm -rf $links 2>/dev/null
 #release_yuzu=$(curl -s https://github.com/yuzu-emu/yuzu-mainline/ | grep "yuzu-emu/yuzu-mainline/releases/tag/" | sed 's/^.*href=/href=/g' | cut -d "/" -f 6 | cut -d \" -f 1)
 #date_yuzu=$(curl -s https://github.com/yuzu-emu/yuzu-mainline/releases/tag/$release_yuzu | grep "datetime=" | sed 's/^.*datetime/datetime/g' | cut -d \" -f 2 | cut -c 1-10 | sed 's/-//g')
 #subrelease_yuzu=$(curl -s https://github.com/yuzu-emu/yuzu-mainline/releases/tag/$release_yuzu | grep data-hovercard-url | grep commit-link | head -n 1 | cut -d "=" -f 4 | cut -d "/" -f 7 | cut -c 1-9)
-link_yuzu=https://github.com/yuzu-mirror/yuzu-downloads/raw/main/Mainline%20Build%20-%20537296095%20(2024-03-04)/yuzu-mainline-20240304-537296095.AppImage
+link_yuzu="https://github.com/yuzu-mirror/yuzu-downloads/raw/main/Mainline%20Build%20-%20537296095%20(2024-03-04)/yuzu-mainline-20240304-537296095.AppImage"
 if [[ "$(uname -a | awk '{print $3}')" < "6" ]]; then 
-   link_yuzu=https://github.com/yuzu-mirror/yuzu-downloads/raw/main/Mainline%20Build%20-%20537296095%20(2024-03-04)/yuzu-mainline-20240304-537296095.AppImage
+   link_yuzu="https://github.com/yuzu-mirror/yuzu-downloads/raw/main/Mainline%20Build%20-%20537296095%20(2024-03-04)/yuzu-mainline-20240304-537296095.AppImage"
 else 
-   link_yuzu=https://github.com/yuzu-mirror/yuzu-downloads/raw/main/Mainline%20Build%20-%20537296095%20(2024-03-04)/yuzu-mainline-20240304-537296095.AppImage
+   link_yuzu="https://github.com/yuzu-mirror/yuzu-downloads/raw/main/Mainline%20Build%20-%20537296095%20(2024-03-04)/yuzu-mainline-20240304-537296095.AppImage"
 fi
 # -------------------------------------------------------------------
 # YUZUEA: 
